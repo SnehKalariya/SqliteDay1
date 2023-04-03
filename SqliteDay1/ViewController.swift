@@ -23,4 +23,15 @@ class ViewController: UIViewController {
             sqlite.addData(name: textField2.text!, id: y)
         }
     }
+    @IBAction func deleteButtonAction(_ sender: UIButton) {
+        if let x = textField1.text, let y = Int(x){
+            sqlite.deleteData(name: textField2.text!, id: y)
+        }
+    }
+    
+    @IBAction func getDataButtonAction(_ sender: UIButton) {
+        let navigation = storyboard?.instantiateViewController(identifier: "ViewController2") as! ViewController2
+        navigationController?.pushViewController(navigation, animated: true)
+    }
+    
 }
