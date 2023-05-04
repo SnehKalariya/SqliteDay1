@@ -29,7 +29,7 @@ class sqlite {
         sqlite3_step(table)
     }
     static func addData(name:String,id:Int){
-        let quary = "insert into Students values ('\(name),\(id))"
+        let quary = "insert into Students values ('\(name)',\(id))"
         var data: OpaquePointer?
         sqlite3_prepare(file, quary, -1, &data, nil)
         print("Add Data")

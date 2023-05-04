@@ -13,7 +13,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var l2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
